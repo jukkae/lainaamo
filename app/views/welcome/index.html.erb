@@ -8,6 +8,7 @@
     <th>Image</th>
     <th>Available?</th>
     <th></th>
+    <th></th>
   </tr>
   <% @art_items.each do |art_item| %>
   <tr>
@@ -16,6 +17,11 @@
     <td><%= art_item.image %></td>
     <td><%= art_item.available %></td>
     <td><%= link_to "Show", art_item %></td>
+    <td>
+      <% if art_item.available %>
+        <%= link_to "Reserve", art_item %>
+      <% end %>
+    </td>
   </tr>
   <% end %>
 </table>
