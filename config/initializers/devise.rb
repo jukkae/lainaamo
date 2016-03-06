@@ -4,13 +4,13 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '2f73c573a2cc5b2d90e7595dc8575c54b0d233baec622a9836d4691d0a36df21913c0b2be025e07a89bcc79b1a5285daf5931432c338e485072364b0c62721b2'
+  config.secret_key = 'b4cb5ddf82f3efc6d305c025a3d5859f2dd6b20518d59e3d7e4b68b095c0fceb62e3f8f70ecf26f7b63ae4aba7fbf3ece6842b353c8d4301eb351f180b1fa65e'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'noreply@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '9dcf1440027bcc0ff7adbdcaef6bbddca05852d6af6e84895f2cc964e971b69abf5d340cce56092de34450d2f121909bd1f371adf02c77947117bd81ad88ef27'
+  # config.pepper = 'cb65a18b9247b4672d313988c5f58937ccfaa0c59c09944ef0c0ce97e216bedc0d54c6b7010b01b469f9658c04e42522a9d94e4ead4712e4cecb83890ae998f9'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -105,7 +105,7 @@ Devise.setup do |config|
   # able to access the website for two days without confirming their account,
   # access will be blocked just in the third day. Default is 0.days, meaning
   # the user cannot access the website without confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+  config.allow_unconfirmed_access_for = 365.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
