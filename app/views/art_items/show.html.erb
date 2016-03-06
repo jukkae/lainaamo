@@ -4,13 +4,12 @@
 
 <div class="content">
 <p>
-  <strong>Name:</strong>
-  <%= @art_item.name %>
+  <strong><%= @art_item.name %></strong>
 </p>
 
 <p>
-  <strong>Artist:</strong>
-  <%= @art_item.artist %>
+By:
+  <strong><%= @art_item.artist %></strong>
 </p>
 
 <p>
@@ -19,10 +18,16 @@
 
 <p>
   <strong>Available:</strong>
-  <%= @art_item.available? %>
+  <% if @art_item.available? %>
+    <%= link_to "Reserve", art_item_reservation_path(@art_item), method: :post %>
+  <% elsif @art_item.user == current_user %>
+    <%= link_to "Return", art_item_reservation_path(@art_item), method: :delete %>
+  <% else %>
+    <%= "Somebody else has this currently." %>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_art_item_path(@art_item) %> |
-<%= link_to 'Back', art_items_path %>
+<!--<%= link_to 'Edit', edit_art_item_path(@art_item) %> |-->
+<!--<%= link_to 'Back', art_items_path %>-->
 <p id="notice"><%= notice %></p>
 </div>
