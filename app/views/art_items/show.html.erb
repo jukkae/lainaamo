@@ -19,8 +19,10 @@ By:
 <p>
   <strong>Available:</strong>
   <% if @art_item.available? %>
+    <%= "Available. " %>
     <%= link_to "Reserve", art_item_reservation_path(@art_item), method: :post %>
   <% elsif @art_item.user == current_user %>
+    <%= "You have this. " %>
     <%= link_to "Return", art_item_reservation_path(@art_item), method: :delete %>
   <% else %>
     <%= "Somebody else has this currently." %>
