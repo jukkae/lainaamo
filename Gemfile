@@ -39,4 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Use devise for authentication
-gem 'devise'
+gem 'devise', '~> 3.4.0'
