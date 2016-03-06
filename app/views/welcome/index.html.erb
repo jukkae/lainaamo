@@ -1,8 +1,11 @@
+<div class="header">
 <h1>Lendiary</h1>
 <% if !user_signed_in? %>
-  <p class="login-form">
+  <p class="user-actions">
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <%= "Email: " %>
       <%= f.text_field :email %>
+      <%= "Password: " %>
       <%= f.password_field :password %>
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
@@ -12,11 +15,16 @@
     <% end %>
   </p>
 <% else %>
-  <p class="logout-form">
+  <p class="user-actions">
     <%= link_to 'My profile', user_path(current_user) %>
     <%= link_to'Logout', destroy_user_session_path, :method => :delete %>
   </p>
 <% end %>
+<p>
+Lendiary is a peer-to-peer artwork lending service. Lend, rent and buy art.
+</p>
+</div>
+<div class="content">
 <h2>Available artworks:</h2>
 <table class="artworks">
   <tr>
@@ -50,3 +58,4 @@
   </tr>
   <% end %>
 </table>
+</div>
