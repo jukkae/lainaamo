@@ -6,12 +6,16 @@
     <th>Title</th>
     <th>Artist</th>
     <th>Image</th>
+    <th>Available?</th>
+    <th></th>
   </tr>
   <% @art_items.each do |art_item| %>
   <tr>
     <td><%= art_item.name %></td>
     <td><%= art_item.artist %></td>
     <td><%= art_item.image %></td>
+    <td><%= art_item.available %></td>
+    <td><%= link_to "Show", art_item %></td>
   </tr>
   <% end %>
 </table>
