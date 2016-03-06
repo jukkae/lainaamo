@@ -29,6 +29,8 @@
     <td>
       <% if art_item.available? %>
         <%= link_to "Reserve", art_item_reservation_path(art_item), method: :post %>
+      <% else %>
+        <%= link_to "Return", art_item_reservation_path(art_item), method: :delete %>
       <% end %>
     </td>
   </tr>
