@@ -1,0 +1,29 @@
+<h1>Listing art_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Artist</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @art_items.each do |art_item| %>
+      <tr>
+        <td><%= art_item.name %></td>
+        <td><%= art_item.artist %></td>
+        <td><%= art_item.image %></td>
+        <td><%= link_to 'Show', art_item %></td>
+        <td><%= link_to 'Edit', edit_art_item_path(art_item) %></td>
+        <td><%= link_to 'Destroy', art_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Art item', new_art_item_path %>
