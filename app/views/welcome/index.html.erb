@@ -1,2 +1,17 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+<h2>Available artworks:</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Image</th>
+  </tr>
+  <% @art_items.each do |art_item| %>
+  <tr>
+    <td><%= art_item.name %></td>
+    <td><%= art_item.artist %></td>
+    <td><%= art_item.image %></td>
+  </tr>
+  <% end %>
+</table>
