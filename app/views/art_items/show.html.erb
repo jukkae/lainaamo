@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+  <h1>Lendiary</h1>
+</div>
 
+<div class="content">
 <p>
   <strong>Name:</strong>
   <%= @art_item.name %>
@@ -26,3 +29,5 @@
 
 <%= link_to 'Edit', edit_art_item_path(@art_item) %> |
 <%= link_to 'Back', art_items_path %>
+<p id="notice"><%= notice %></p>
+</div>
