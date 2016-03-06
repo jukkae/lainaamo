@@ -24,10 +24,10 @@
     <td><%= art_item.name %></td>
     <td><%= art_item.artist %></td>
     <td><%= art_item.image %></td>
-    <td><%= art_item.available %></td>
+    <td><%= art_item.available? %></td>
     <td><%= link_to "Show", art_item %></td>
     <td>
-      <% if art_item.available %>
+      <% if art_item.available? %>
         <%= link_to "Reserve", art_item %>
       <% end %>
     </td>
