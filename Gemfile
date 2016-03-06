@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use pg for deployment
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 # Use devise for authentication
 gem 'devise', '~> 3.4.0'
+
+# Use sqlite3 as the database for Active Record LOCALLY
+gem 'sqlite3', group: :development
