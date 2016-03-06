@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   resources :art_items do
-    resource :reservation, only: [:create, :delete]
+    resource :reservation, only: [:create, :destroy]
   end
 
   root 'welcome#index'

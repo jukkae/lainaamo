@@ -29,8 +29,10 @@
     <td>
       <% if art_item.available? %>
         <%= link_to "Reserve", art_item_reservation_path(art_item), method: :post %>
-      <% else %>
+      <% else if art_item.user == current_user %>
         <%= link_to "Return", art_item_reservation_path(art_item), method: :delete %>
+      <% else %>
+        <%= "This item is reserved to someone else." %>
       <% end %>
     </td>
   </tr>
