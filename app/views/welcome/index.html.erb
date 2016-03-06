@@ -12,7 +12,8 @@
   </p>
 <% else %>
   <p class="logout-form">
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <%= link_to 'My profile', user_path(current_user) %>
+    <%= link_to'Logout', destroy_user_session_path, :method => :delete %>
   </p>
 <% end %>
 <h2>Available artworks:</h2>
