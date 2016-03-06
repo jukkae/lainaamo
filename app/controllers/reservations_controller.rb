@@ -5,5 +5,6 @@ class ReservationsController < ApplicationController
       @art_item.user = current_user
       @art_item.save!
     end
+    redirect_to :back
   end
 end

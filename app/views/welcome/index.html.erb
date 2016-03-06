@@ -28,7 +28,7 @@
     <td><%= link_to "Show", art_item %></td>
     <td>
       <% if art_item.available? %>
-        <%= link_to art_item_reservation_path(art_item), method: :post %>
+        <%= link_to "Reserve", art_item_reservation_path(art_item), method: :post %>
       <% end %>
     </td>
   </tr>
