@@ -42,6 +42,6 @@ gem 'spring',        group: :development
 gem 'devise', '~> 3.4.0'
 
 # Use sqlite3 as the database for Active Record LOCALLY
-group :development do
+group :development, :test do
   gem 'sqlite3'
 end
