@@ -41,8 +41,9 @@ table.artworks {
 }
 
 table.artworks td {
-	border-bottom: 1px solid black;
+	padding: 1em;
 }
+
 
 h1 {
 	margin-top: 0;

@@ -25,36 +25,29 @@ Lendiary is a peer-to-peer artwork lending service. Lend, rent and buy art.
 </p>
 </div>
 <div class="content">
-<h2>Available artworks:</h2>
+<h2>Artworks:</h2>
 <table class="artworks">
-  <tr>
-    <th>Title</th>
-    <th>Artist</th>
-    <th>Image</th>
-    <th>Available?</th>
-    <th></th>
-    <th></th>
-  </tr>
   <% @art_items.each do |art_item| %>
   <tr>
-    <td><%= art_item.name %></td>
-    <td><%= art_item.artist %></td>
-    <td><%= art_item.image %></td>
-    <td><%= art_item.available? %></td>
-    <td><%= link_to "Show details", art_item %></td>
+    <td><img src="<%= art_item.image %>" style="max-width: 360px;"/></td>
+    <td><strong><%= art_item.name %></strong><br/> by <%= art_item.artist %></td>
+    <td>
+      <% if art_item.available? %>
+        Available!<br/>
+      <% end %>
+    <%= link_to "Show details", art_item %>
     <% if user_signed_in? %>
-      <td>
+      <br/>
         <% if art_item.available? %>
           <%= link_to "Reserve", art_item_reservation_path(art_item), method: :post %>
         <% elsif art_item.user == current_user %>
           <%= link_to "Return", art_item_reservation_path(art_item), method: :delete %>
         <% else %>
-          <%= "This item is reserved to someone else." %>
+          <%= "Not available." %>
         <% end %>
-      </td>
     <% else %>
-      <td/>
     <% end %>
+    </td>
   </tr>
   <% end %>
 </table>
