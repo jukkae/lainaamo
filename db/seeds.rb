@@ -11,3 +11,10 @@ ArtItem.create(name: 'The Garden of Earthly Delights', artist: 'Bosch, Hieronymu
 ArtItem.create(name: 'Composition A', artist: 'Mondrian, Piet', image: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Composition_A_by_Piet_Mondrian_Galleria_Nazionale_d\'Arte_Moderna_e_Contemporanea.jpg')
 ArtItem.create(name: 'Four Bathing Men', artist: 'Cézanne, Paul', image: 'https://upload.wikimedia.org/wikipedia/commons/6/66/Cezanne_-_Vier_badende_M%C3%A4nner.jpg')
 ArtItem.create(name: 'We Shall Not Go to the Market Today', artist: 'Gauguin, Paul', image: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Paul_Gauguin_030.jpg')
+
+user = User.create!(
+  :email => "testi@example.com",
+  :password => "12345678",
+  :password_confirmation => "12345678"
+  )
+user.save!
