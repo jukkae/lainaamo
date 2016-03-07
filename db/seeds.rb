@@ -24,7 +24,8 @@ ArtItem.create(name: 'Rugged Dune Landscape', artist: 'Heijnsbroek, Fons', image
 ArtItem.create(name: 'Maastricht. A Perfect City.', artist: 'Dwurnik, Edward', image: 'https://ingart.pl/public/upload/artworks/zoom/26.jpg', medium: 'Acrylic on canvas')
 ArtItem.create(name: 'Galicia', artist: 'Dwurnik, Edward', image: 'https://ingart.pl/public/upload/artworks/medium/4.jpg', medium: 'Acrylic on canvas')
 ArtItem.create(name: 'Red.six', artist: 'Rebezha, Ekaterina', image: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Rebezha_redsquare.JPG', medium: 'Oil on canvas')
-
+ArtItem.create(name: 'Grasshopper', artist: 'Levett, Alexander', image: 'http://img07.deviantart.net/8c3e/i/2013/136/a/e/grasshopper_by_ambr0-d65dzo0.jpg', medium: 'Pencil on paper')
+ArtItem.create(name: 'From the Cycle Chairs', artist: 'Nesleha, Pavel', image: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Nesleha-Kresby-Zidle.jpg', medium: 'Pencil on paper')
 
 
 
