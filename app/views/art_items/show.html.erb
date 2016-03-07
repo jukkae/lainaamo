@@ -13,7 +13,25 @@ By:
 </p>
 
 <p>
+Medium:
+  <strong><%= @art_item.medium %></strong>
+</p>
+
+<p>
+Year:
+  <strong>XXXX</strong>
+</p>
+
+<p>
   <img src="<%= @art_item.image %>"/>
+</p>
+
+<p class="details">
+  *** Details and miscellaneous information ***
+</p>
+
+<p class="pricing">
+  *** Pricing information, terms etc. ***
 </p>
 
 <p>
@@ -31,5 +49,6 @@ By:
 
 <!--<%= link_to 'Edit', edit_art_item_path(@art_item) %> |-->
 <!--<%= link_to 'Back', art_items_path %>-->
+<p class="footer">All content is either public domain or licensed under creative commons.</p>
 <p id="notice"><%= notice %></p>
 </div>
