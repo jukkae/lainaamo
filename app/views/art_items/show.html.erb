@@ -3,24 +3,44 @@
 </div>
 
 <div class="content">
-<p>
+
+<table class="information">
+<tr>
+<td>
+Title:
+</td>
+<td>
   <strong><%= @art_item.name %></strong>
-</p>
+</td>
+</tr>
 
-<p>
-By:
+<tr>
+<td>
+By: 
+</td>
+<td>
   <strong><%= @art_item.artist %></strong>
-</p>
+</td>
+</tr>
 
-<p>
+<tr>
+<td>
 Medium:
+</td>
+<td>
   <strong><%= @art_item.medium %></strong>
-</p>
+</td>
+</tr>
 
-<p>
-Year:
+<tr>
+<td>
+Year: 
+</td>
+<td>
   <strong>XXXX</strong>
-</p>
+</td>
+</tr>
+</table>
 
 <p>
   <img src="<%= @art_item.image %>"/>
