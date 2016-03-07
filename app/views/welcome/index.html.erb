@@ -30,7 +30,11 @@ Lendiary is a peer-to-peer artwork lending service. Lend, rent and buy art direc
   <% @art_items.each do |art_item| %>
   <tr>
     <td><img src="<%= art_item.image %>" style="max-width: 360px;"/></td>
-    <td><strong><%= art_item.name %></strong><br/> by <%= art_item.artist %></td>
+    <td>
+      <strong><%= art_item.name %></strong><br/>
+      by <%= art_item.artist %><br/>
+      <%= art_item.medium %>
+    </td>
     <td>
       <% if art_item.available? %>
         Available now!<br/>
