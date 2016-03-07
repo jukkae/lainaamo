@@ -50,6 +50,10 @@ h1 {
 	padding-top: 1em;
 }
 
+h1 a {
+	text-decoration: none;
+}
+
 h2 {
 	margin-top: 2em;
 	margin-bottom: 1em;
