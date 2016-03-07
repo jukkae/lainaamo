@@ -30,7 +30,7 @@ ArtItem.create(name: 'From the Cycle Chairs', artist: 'Nesleha, Pavel', image: '
 
 
 user = User.create!(
-  :email => "testi@example.com",
+  :email => "test@example.com",
   :password => "12345678",
   :password_confirmation => "12345678"
   )
